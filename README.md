@@ -3,6 +3,8 @@
 Javascript
 1. smooth scroll-roll:
 
+//this is an example of event propagation
+
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -12,3 +14,4 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
