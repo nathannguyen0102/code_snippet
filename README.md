@@ -3,9 +3,12 @@
 Javascript
 1. smooth scroll-roll:
 
-const btnScroolTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
 
-btnScroolTo.addEventListener('click', () => {
-  section1.scrollIntoView({ behavior: 'smooth' });
+  // Matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
