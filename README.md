@@ -1,6 +1,6 @@
 # code_snippet
 
-Javascript snippet
+Javascript snippet.
 1. smooth scroll-roll:
 
 //this is an example of event propagation
