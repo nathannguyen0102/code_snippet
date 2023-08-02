@@ -16,9 +16,6 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 });
 
-//Add foreach function to make it work in any nav-link
-const nav = document.querySelectorAll(".nav-link");
-
 nav.forEach(function (t) {
   t.addEventListener("click", function (e) {
     e.preventDefault();
