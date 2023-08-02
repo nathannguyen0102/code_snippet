@@ -4,7 +4,8 @@ Javascript snippet.
 
 1. smooth scroll-roll:
 
-//this is an example of event propagation
+//this is an example of event propagation.
+//this is using event delagation.
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
