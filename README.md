@@ -72,31 +72,25 @@ tabsContainer.addEventListener('click', function (e) {
     .classList.add('operations__content--active');
 });
 
-4.// Sticky navigation: Intersection Observer API
-const header = document.querySelector('.header');
-const navHeight = nav.getBoundingClientRect().height;
-
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  // console.log(entry);
-
-  if (!entry.isIntersecting) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
-};
-
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight}px`,
+4.// Sticky navigation: 
+JS:
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-headerObserver.observe(header);
-
-//CSS Sticky:
-.nav.sticky {
+CSS:
+header {
+  transition: all 0.6s ease;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  z-index: 999999999;
 }
+header.sticky {
+  background: #1483d5;
+  padding-bottom: 20px;
+}
+
 
 ///////////////////////////////////////
 5 Reveal sections
