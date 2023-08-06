@@ -17,6 +17,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 });
 
+//example of forEach loop
 nav.forEach(function (t) {
   t.addEventListener("click", function (e) {
     e.preventDefault();
