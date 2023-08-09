@@ -143,3 +143,6 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
+
+7. Menu nav
+transition-property: right;
