@@ -7,11 +7,11 @@ Javascript snippet.
 //this is an example of event propagation.
 //this is using event delagation.
 
-document.querySelector('.nav__links').addEventListener('click', function (e) {
+document.querySelector('.nav-links').addEventListener('click', function (e) {
   e.preventDefault();
 
   // Matching strategy
-  if (e.target.classList.contains('nav__link')) {
+  if (e.target.classList.contains('nav-link')) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
