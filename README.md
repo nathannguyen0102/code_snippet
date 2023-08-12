@@ -85,7 +85,7 @@ header {
   transition: all 0.6s ease;
   position: fixed;
   width: 100%;
-  z-index: 999999999;
+  z-index: 99999999;
 }
 header.sticky {
   background: #1483d5;
