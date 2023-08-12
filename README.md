@@ -144,5 +144,23 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
-7. Menu nav
-transition-property: right;
+
+**7. Fetch data from third party API:**
+
+const input = document.querySelector(".input");
+const btn = document.querySelector(".btn");
+const img = document.querySelector(".img");
+
+btn.addEventListener("click", function () {
+  const value = input.value.trim();
+  console.log(value);
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${value}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const imgSrc = data.meals[0].strMealThumb;
+      console.log(imgSrc);
+      img.src = imgSrc;
+    });
+});
+
+
