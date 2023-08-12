@@ -150,17 +150,25 @@ imgTargets.forEach(img => imgObserver.observe(img));
 const input = document.querySelector(".input");
 const btn = document.querySelector(".btn");
 const img = document.querySelector(".img");
+const display = document.querySelector(".display");
 
 btn.addEventListener("click", function () {
   const value = input.value.trim();
-  console.log(value);
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${value}`)
     .then((response) => response.json())
     .then((data) => {
-      const imgSrc = data.meals[0].strMealThumb;
-      console.log(imgSrc);
-      img.src = imgSrc;
+      const arrayLength = data.meals.length;
+      console.log(arrayLength);
+      for (let i = 0; i < arrayLength; i++) {
+        const img = document.createElement("img");
+        display.appendChild(img);
+        img.src = data.meals[i].strMealThumb;
+        const foodName = document.createElement("p");
+        display.appendChild(foodName);
+        foodName.textContent = `${data.meals[i].strMeal}`;
+      }
     });
 });
+
 
 
