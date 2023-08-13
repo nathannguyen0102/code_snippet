@@ -170,5 +170,9 @@ btn.addEventListener("click", function () {
     });
 });
 
+**8. Align item inside a div grid**
+.hero-div-right {
+  justify-self: end;
+}
 
 
