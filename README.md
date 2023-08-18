@@ -175,4 +175,5 @@ btn.addEventListener("click", function () {
   justify-self: end;
 }
 
+**9. Align item inside a div grid**
 
