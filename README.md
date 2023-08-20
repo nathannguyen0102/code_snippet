@@ -176,4 +176,5 @@ btn.addEventListener("click", function () {
 }
 
 **9. Align item inside a div grid**
+10 react:
 
