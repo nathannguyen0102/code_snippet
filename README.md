@@ -31,7 +31,7 @@ nav.forEach(function (t) {
 
 2. Switch tab
 
-/////////////////////////////////
+////////////////////////////////
 // Tabbed component
 
 tabsContainer.addEventListener('click', function (e) {
