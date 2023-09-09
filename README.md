@@ -30,8 +30,8 @@ nav.forEach(function (t) {
 });
 
 2. Switch tab
-
-///////////////////////////////
+3. 
+//////////////////////////////
 // Tabbed component
 
 tabsContainer.addEventListener('click', function (e) {
