@@ -93,7 +93,7 @@ header.sticky {
 }
 
 
-///////////////////////////////////////
+//////////////////////////////////////
 5 Reveal sections
 const allSections = document.querySelectorAll('.section');
 
